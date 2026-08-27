@@ -1,0 +1,2 @@
+timestamp,filename,status,detections,best_class,best_confidence2026-08-27T20:06:03.979115,img.jpeg,NO_OBJECT_DETECTED,0,,0
+2026-08-27T20:06:32.499451,test.png,DETECTED,4,shipwreck,40.14

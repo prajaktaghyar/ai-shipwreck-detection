@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Marine Debris Detection
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <h1>
+            🌊 Marine Debris Detection
+        </h1>
+
+        <p>
+            Side-Scan Sonar Image Analysis
+        </p>
+
+    </header>
+
+
+    <section class="status-card">
+
+        <div>
+
+            <span class="label">
+                YOLO MODEL
+            </span>
+
+            {% if model_loaded %}
+
+            <span class="status loaded">
+                ● LOADED
+            </span>
+
+            {% else %}
+
+            <span class="status not-loaded">
+                ● NOT LOADED
+            </span>
+
+            {% endif %}
+
+        </div>
+
+        <div>
+
+            <span class="label">
+                CONFIDENCE
+            </span>
+
+            <span>
+                25%
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <section class="upload-card">
+
+        <h2>
+            Upload Sonar Image
+        </h2>
+
+        <form id="uploadForm">
+
+            <input
+                type="file"
+                id="imageInput"
+                name="image"
+                accept="image/*"
+                required
+            >
+
+            <button type="submit">
+                Detect Object
+            </button>
+
+        </form>
+
+        <div
+            id="loading"
+            class="loading hidden"
+        >
+            Processing sonar image...
+        </div>
+
+    </section>
+
+
+    <section
+        id="resultSection"
+        class="result-section hidden"
+    >
+
+        <div class="image-panel">
+
+            <h2>
+                Detection Result
+            </h2>
+
+            <img
+                id="resultImage"
+                src=""
+                alt="Detection Result"
+            >
+
+        </div>
+
+
+        <div class="details-panel">
+
+            <h2>
+                Detection Details
+            </h2>
+
+            <div class="detail">
+
+                <span>
+                    Status
+                </span>
+
+                <strong id="resultStatus">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    Object
+                </span>
+
+                <strong id="resultClass">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail">
+
+                <span>
+                    Confidence
+                </span>
+
+                <strong id="resultConfidence">
+                    -
+                </strong>
+
+            </div>
+
+
+            <h3>
+                All Detections
+            </h3>
+
+            <div id="detections">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="information">
+
+        <h2>
+            Dataset
+        </h2>
+
+        <p>
+            AI4Shipwrecks side-scan sonar imagery is used as a research
+            foundation for underwater object detection.
+        </p>
+
+        <p class="warning">
+
+            The original AI4Shipwrecks dataset contains shipwreck and
+            non-shipwreck labels. A dedicated marine-debris class requires
+            additional marine-debris annotations.
+
+        </p>
+
+    </section>
+
+</div>
+
+
+<script
+    src="{{ url_for('static', filename='dashboard.js') }}"
+></script>
+
+</body>
+
+</html>

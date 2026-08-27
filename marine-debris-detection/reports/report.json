@@ -1,0 +1,81 @@
+[
+    {
+        "timestamp": "2026-08-27T20:06:03.979115",
+        "status": "NO_OBJECT_DETECTED",
+        "message": "No object detected above threshold",
+        "detections": [],
+        "best_class": "",
+        "best_confidence": 0,
+        "result_image": "/results/detected_processed_20260827_200601_704777_img.jpg",
+        "filename": "img.jpeg",
+        "input_image": "/uploads/20260827_200601_704777_img.jpeg"
+    },
+    {
+        "timestamp": "2026-08-27T20:06:32.499451",
+        "status": "DETECTED",
+        "message": "Object detected",
+        "detections": [
+            {
+                "class_id": 0,
+                "class_name": "shipwreck",
+                "confidence": 0.4014,
+                "confidence_percent": 40.14,
+                "confidence_level": "LOW",
+                "status": "DETECTED",
+                "bbox": {
+                    "x1": 694,
+                    "y1": 774,
+                    "x2": 724,
+                    "y2": 814
+                }
+            },
+            {
+                "class_id": 0,
+                "class_name": "shipwreck",
+                "confidence": 0.3187,
+                "confidence_percent": 31.87,
+                "confidence_level": "LOW",
+                "status": "DETECTED",
+                "bbox": {
+                    "x1": 602,
+                    "y1": 417,
+                    "x2": 913,
+                    "y2": 689
+                }
+            },
+            {
+                "class_id": 0,
+                "class_name": "shipwreck",
+                "confidence": 0.2999,
+                "confidence_percent": 29.99,
+                "confidence_level": "LOW",
+                "status": "DETECTED",
+                "bbox": {
+                    "x1": 233,
+                    "y1": 0,
+                    "x2": 363,
+                    "y2": 180
+                }
+            },
+            {
+                "class_id": 0,
+                "class_name": "shipwreck",
+                "confidence": 0.2698,
+                "confidence_percent": 26.98,
+                "confidence_level": "LOW",
+                "status": "DETECTED",
+                "bbox": {
+                    "x1": 735,
+                    "y1": 746,
+                    "x2": 754,
+                    "y2": 768
+                }
+            }
+        ],
+        "best_class": "shipwreck",
+        "best_confidence": 40.14,
+        "result_image": "/results/detected_processed_20260827_200632_261678_test.jpg",
+        "filename": "test.png",
+        "input_image": "/uploads/20260827_200632_261678_test.png"
+    }
+]
