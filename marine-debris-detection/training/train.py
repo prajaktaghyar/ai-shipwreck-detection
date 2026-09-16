@@ -28,10 +28,10 @@ BASE_MODEL = "yolov8n.pt"
 
 OUTPUT_DIR = os.path.join(
     BASE_DIR,
-    "models"
+    "runs"
 )
 
-EPOCHS = 20
+EPOCHS = 50
 IMAGE_SIZE = 640
 BATCH_SIZE = 8
 WORKERS = 4
